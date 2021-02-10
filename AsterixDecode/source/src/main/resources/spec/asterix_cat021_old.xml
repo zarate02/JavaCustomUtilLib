@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<category no="21" ver="0.26">
+
+    <dataitem name="I021/010" frn="1" format="fixed" length="2">
+      <title>Data Source Identifier</title>
+      <definition>Identification of the system sending the data</definition>
+      <structure octet="1" frombit="16" tobit="9">
+        <name>SAC</name>
+        <format>uint</format>
+        <unit></unit>
+        <scale>1</scale>
+        <desc>System Area Code</desc>
+      </structure>
+      <structure octet="2" frombit="8" tobit="1">
+        <name>SIC</name>
+        <format>uint</format>
+        <unit></unit>
+        <scale>1</scale>
+        <desc>System Identification code</desc>
+      </structure>
+    </dataitem>    
+    
+    <dataitem id="I021/040" frn="2" format="fixed" length="2">
+      <title>Target Report Descriptor</title>
+      <definition>Type and characteristics of the data as transmitted by a system.</definition>
+      <structure octet="1" frombit="16" tobit="1">
+        <name>TRD</name>
+        <format>uint</format>
+        <unit></unit>
+        <scale></scale>
+        <desc></desc>
+      </structure>
+    </dataitem>
+    
+    <dataitem name="I021/030" frn="3" format="fixed" length="3">
+      <title>Time of day</title>
+      <definition>Absolute time stamping expressed as UTC</definition>
+      <structure octet="1" frombit="24" tobit="1">
+        <name>TOD</name>
+        <format>uint</format>
+        <unit>s</unit>
+        <scale>0.0078125</scale>
+        <desc></desc>
+      </structure>    
+    </dataitem>  
+    
+    <dataitem name="I021/130" frn="4" format="fixed" length="8">
+      <title> Calculated Position In WGS-84 Co-ordinates</title>
+      <definition>Calculated Position in WGS-84</definition>
+      <structure octet="1" frombit="64" tobit="33">
+        <name>Latitude</name>
+        <format>int</format>
+        <unit>degree</unit>
+        <scale>0.00000536441802978515625</scale>
+        <desc></desc>
+      </structure>
+      <structure octet="2" frombit="32" tobit="1">
+        <name>Longitude</name>
+        <format>int</format>
+        <unit>degree</unit>
+        <scale>0.00000536441802978515625</scale>
+        <desc></desc>
+      </structure>   
+    </dataitem>  
+          
+    <dataitem name="I021/080" frn="5" format="fixed" length="3">
+   	  <title>Target Address</title>
+      <definition>Target Address(24-bits address) assigned uniquely to each target</definition>
+      <structure octet="1" frombit="24" tobit="1">
+        <name>TargetAddress</name>
+        <format>uint</format>
+        <unit></unit>
+        <scale></scale>
+        <desc>24-bits Target Adddress, A23 to A0</desc>
+      </structure>
+    </dataitem>
+     
+    <dataitem name="I021/140" frn="6" format="fixed" length="2">
+     	  <title>Geometric Altitude</title>
+	      <definition>-</definition>
+	      <structure octet="1" frombit="16" tobit="1">
+	        <name>GA</name>
+	        <format>uint</format>
+	        <unit></unit>
+	        <scale></scale>
+	        <desc></desc>
+	      </structure>    	     
+    </dataitem>
+    
+    <dataitem name="I021/090" frn="7" format="fixed" length="2">
+	    <title>Figure of Merit</title>
+	      <definition>-</definition>
+	      <structure octet="1" frombit="16" tobit="1">
+	        <name>FOM</name>
+	        <format>uint</format>
+	        <unit></unit>
+	        <scale></scale>
+	        <desc></desc>
+	      </structure>
+    </dataitem>
+    
+    <dataitem name="I021/210" frn="8" format="fixed" length="1">
+    	<title>Link Technology Indicator</title>
+    	<description>-</description>
+    	<structure octet="1" frombit="16" tobit="1">
+	        <name>LTI</name>
+	        <format>uint</format>
+	        <unit></unit>
+	        <scale></scale>
+	        <desc></desc>
+	      </structure>
+    </dataitem>
+    
+    <dataitem name="I021/230" frn="9" format="fixed" length="2">
+    	<title>Roll Angle</title>
+    	<description>-</description>
+        <structure octet="1" frombit="16" tobit="1">
+	        <name>RA</name>
+	        <format>uint</format>
+	        <unit></unit>
+	        <scale></scale>
+	        <desc></desc>
+	      </structure>
+    </dataitem>
+    
+    <dataitem name="I021/145" frn="10" format="fixed" length="2">
+	  <title>Flight Level</title>
+      <description>Flight Level from barometric measurements, not QNH corrected, in two’s complement form.</description>
+      <structure octet="1" frombit="16" tobit="1">
+	        <name>FL</name>
+	        <format>uint</format>
+	        <unit></unit>
+	        <scale></scale>
+	        <desc></desc>
+	  </structure>
+    </dataitem>
+    
+    <dataitem name="I021/150" frn="11" format="fixed" length="2">
+    	<title>Air Speed</title>
+    	<description>-</description>
+        <structure octet="1" frombit="16" tobit="1">
+	        <name>AS</name>
+	        <format>uint</format>
+	        <unit></unit>
+	        <scale></scale>
+	        <desc></desc>
+	  	</structure>
+    </dataitem>
+     
+    <dataitem name="I021/151" frn="12" format="fixed" length="2">
+    	<title>True Airspeed</title>
+    	<description>-</description>
+        <structure octet="1" frombit="16" tobit="1">
+	        <name>TA</name>
+	        <format>uint</format>
+	        <unit></unit>
+	        <scale></scale>
+	        <desc></desc>
+	  	</structure>
+    </dataitem>
+    
+    <dataitem name="I021/152" frn="13" format="fixed" length="2">
+    	<title>Magnetic Heading</title>
+    	<description>-</description>
+        <structure octet="1" frombit="16" tobit="1">
+          <name>MH</name>
+          <format>int</format>
+          <desc>-</desc>
+        </structure>
+    </dataitem>
+    
+    <dataitem name="I021/155" frn="14" format="fixed" length="2">
+    	<title>Barometric Vertical Rate</title>
+    	<description>-</description>
+        <structure octet="1" frombit="16" tobit="1">
+          <name>BV</name>
+          <format>int</format>
+          <desc>-</desc>
+        </structure>
+    </dataitem>
+    
+    <dataitem name="I021/157" frn="15" format="fixed" length="2">
+    	<title>Geometric Vertical Rate</title>
+    	<description>-</description>
+        <structure octet="1" frombit="16" tobit="1">
+          <name>GVR</name>
+          <format>int</format>
+          <desc>-</desc>
+        </structure>
+    </dataitem>
+    
+    <dataitem name="I021/160" frn="16" format="fixed" length="4">
+    	<title>Ground Vector</title>
+    	<description>-</description>
+        <structure octet="1" frombit="32" tobit="1">
+          <name>GV</name>
+          <format>int</format>
+          <desc>-</desc>
+        </structure>
+    </dataitem>
+    
+    <dataitem name="I021/165" frn="17" format="compound" length="1">
+      <title>Rate Of Turn</title>
+      <definition>-</definition>
+      <structure></structure>
+    </dataitem> 
+    
+    <dataitem name="I021/170" frn="18" format="fixed" length="6">
+    	<structure octet="1" frombit="48" tobit="1">
+	        <name>TargetIdentification</name>
+	        <format>icaocode</format>
+	        <unit></unit>
+	        <scale></scale>
+	        <desc>ICAO Annex.10 Volume 1, Part 1, section 3.8.2.9 for coding rules</desc>
+	    </structure>
+    </dataitem>
+    
+    <dataitem name="I021/095" frn="19" format="fixed" length="1">
+	    <title>Velocity Accuracy</title>
+	      <definition>-</definition>
+	      <structure octet="1" frombit="8" tobit="1">
+	        <name>VA</name>
+	        <format>uint</format>
+	        <unit></unit>
+	        <scale></scale>
+	        <desc></desc>
+	      </structure>
+    </dataitem>
+    
+    <dataitem name="I021/032" frn="20" format="fixed" length="1">
+      <title>Time of Day Accuracy</title>
+      <definition>The maximum difference between the actual time of applicability of the reported position and the time reported in the Time of Day item</definition>
+      <structure octet="1" frombit="8" tobit="1">
+        <name>TODA</name>
+        <format>uint</format>
+        <unit>s</unit>
+        <scale>0.00390625</scale>
+        <desc></desc>
+      </structure>    
+    </dataitem>  
+    
+    <dataitem name="I021/200" frn="21" format="fixed" length="1">
+    	<title>Target Status</title>
+    	<description>-</description>
+        <structure octet="1" frombit="8" tobit="1">
+          <name>TS</name>
+          <format>int</format>
+          <desc>-</desc>
+        </structure>
+    </dataitem>
+    
+    <dataitem id="I021/020" frn="22" format="fixed" length="1">
+      <name>Emitter Category</name>
+      <definition>Characteristics of the originating ADS-B unit.</definition>
+      <field octed="1" msb="8" lsb="1">
+        <name>ECAT</name>
+        <desc>Emitter Category</desc>
+        <enum value="1">light aircraft &lt;= 7000 kg</enum>
+        <enum value="2">reserved</enum>
+        <enum value="3">7000 kg &lt; medium aircraft &lt; 136000 kg</enum>
+        <enum value="4">reserved</enum>
+        <enum value="5">136000 kg &lt;= heavy aircraft</enum>
+        <enum value="6">highly manoeuvrable (5g acceleration capability) and high speed (&gt;400 knotscruise)</enum>
+        <enum value="7">reserved</enum>
+        <enum value="8">reserved</enum>
+        <enum value="9">reserved</enum>
+        <enum value="10">rotocraft</enum>
+        <enum value="11">glider / sailplane</enum>
+        <enum value="12">lighter-than-air</enum>
+        <enum value="13">unmanned aerial vehicle</enum>
+        <enum value="14">space / transatmospheric vehicle</enum>
+        <enum value="15">ultralight / handglider / paraglider</enum>
+        <enum value="16">parachutist / skydiver</enum>
+        <enum value="17">reserved</enum>
+        <enum value="18">reserved</enum>
+        <enum value="19">reserved</enum>
+        <enum value="20">surface emergency vehicle</enum>
+        <enum value="21">surface service vehicle</enum>
+        <enum value="22">fixed ground or tethered obstruction</enum>
+        <enum value="23">reserved</enum>
+        <enum value="24">reserved</enum>
+      </field>
+    </dataitem>
+ 
+    <dataitem name="I021/220" frn="23" format="compound" length="1">
+      <title>Met Information</title>
+      <definition>-</definition>
+      <structure></structure>
+    </dataitem> 
+    
+    <dataitem name="I021/146" frn="24" format="fixed" length="2">
+    	<title>Intermediate State Selected Altitude</title>
+    	<description>-</description>
+        <structure octet="1" frombit="16" tobit="1">
+          <name>ISA</name>
+          <format>int</format>
+          <desc>-</desc>
+        </structure>
+    </dataitem>
+    
+    <dataitem name="I021/148" frn="25" format="fixed" length="2">
+    	<title>Final State Selected Altitude</title>
+    	<description>-</description>
+        <structure octet="1" frombit="16" tobit="1">
+          <name>FSSA</name>
+          <format>int</format>
+          <desc>-</desc>
+        </structure>
+    </dataitem>
+    
+    <dataitem name="I021/110" frn="26" format="compound" length="1">
+      <title>Trajectory Intent</title>
+      <definition>-</definition>
+      <structure></structure>
+    </dataitem> 
+    
+    <dataitem name="I021/070" frn="27" format="fixed" length="2">
+   	  <title>Mode 3/A Code in Octal Representation</title>
+      <definition>-</definition>
+      <structure octet="1" frombit="16" tobit="1">
+        <name>M3CIOR</name>
+        <format>uint</format>
+        <unit></unit>
+        <scale></scale>
+        <desc></desc>
+      </structure>
+    </dataitem>
+    
+    <dataitem name="I021/131" frn="28" format="fixed" length="1">
+	    <title>Signal Amplitude</title>
+	      <definition>-</definition>
+	      <structure octet="1" frombit="8" tobit="1">
+	        <name>SA</name>
+	        <format>uint</format>
+	        <unit></unit>
+	        <scale></scale>
+	        <desc></desc>
+	      </structure>
+    </dataitem>
+    
+</category>
